@@ -11,14 +11,20 @@
 
 <body>
 	<div class="container">
+		<div class="page-header">
+		  <h1>Example page header <small>We choose for you</small></h1>
+		</div>
 		<div class="hero-unit">
-	    <div id="player"></div>
-		<form>
-			<input type="text" data-provide="typehead" name="option">
-			<input type="text" data-provide="typehead" name="option">
-			<button type="button" class="btn btn-primary" data-toggle="button" id="addBtn" onclick="addLine();">+</button>
-			<button type="button" class="btn btn-primary" data-toggle="button" onclick="choose();">Submit</button>
-		</form>
+			<div id="chosen"></div>
+		    <div id="player"></div>
+			<form>
+				<input type="text" data-provide="typehead" name="option">
+				<input type="text" data-provide="typehead" name="option">
+				<button type="button" class="btn btn-primary" data-toggle="button" 
+					onclick="addLine();" id="addBtn">+</button>
+				<button type="button" class="btn btn-primary" data-toggle="button" 
+					onclick="choose();">Submit</button>
+			</form>
 		
 		</div>
 	</div>

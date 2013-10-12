@@ -5,3 +5,11 @@ input[type="text"] {
 	display: block;
 	width: 400px;	
 }
+
+h1 {
+	color: #006699;
+	text-shadow: 3px 3px #E0E0E0;
+}
+h1 small {
+	color: #0099CC;
+}

@@ -7,13 +7,15 @@ function addLine() {
 }
 
 function choose() {
-	var result = Math.floor(Math.random() * $("input[name=option]").length);
-
-	SC.get('/tracks', {q: $("input[name=option]")[result].value, limit: 50}, function(tracks) {
+	var i = Math.floor(Math.random() * $("input[name=option]").length);
+	var text = $("input[name=option]")[i].value;
+	SC.get('/tracks', {q: $("input[name=option]")[i].value, limit: 50}, function(tracks) {
 		console.log(tracks);
-	  var result = Math.floor(Math.random() * tracks.length);
-		SC.oEmbed(tracks[result].permalink_url, { auto_play: true }, function(oEmbed) {
+	  var j = Math.floor(Math.random() * tracks.length);
+		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
 		  $("#player").html(oEmbed.html);
+		  console.log(text);
+		  $("#chosen").append($("<p>").text(text));
 		});
 	});
 	reset();
