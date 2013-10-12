@@ -15,7 +15,7 @@ function choose() {
 		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
 		  $("#player").html(oEmbed.html);
 		  console.log(text);
-		  $("#chosen").append($("<p>").text(text));
+		  $("#chosen").text(text);
 		});
 	});
 	reset();
