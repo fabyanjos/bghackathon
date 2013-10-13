@@ -3,14 +3,17 @@ SC.initialize({
 });
 
 function addLine() {
-	$("#addBtn").before('<p><input type="text" class="form-control" id="focusedInput" name="option"></p>')
+	$("#addBtn").before('<input type="text" class="form-control" id="focusedInput" name="option">')
+}
+
+function removeLine() {
+	$('#addBtn').prev().remove();
 }
 
 function choose() {
 	var i = Math.floor(Math.random() * $("input[name=option]").length);
 	var text = $("input[name=option]")[i].value;
 	SC.get('/tracks', {q: $("input[name=option]")[i].value, limit: 50}, function(tracks) {
-		console.log(tracks);
 	  var j = Math.floor(Math.random() * tracks.length);
 		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
 		  $("#player").html(oEmbed.html);

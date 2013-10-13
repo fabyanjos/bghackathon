@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Decide for me</title>
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="css/style.css" rel="stylesheet" media="screen">
-<script src="http://connect.soundcloud.com/sdk.js"></script>
-<script src="/js/main.js"></script>
-
+	<title>Decide for me</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/style.css" rel="stylesheet" media="screen">
+	<script src="http://connect.soundcloud.com/sdk.js"></script>
+	<script src="/js/main.js"></script>
 </head>
 
 <body>
@@ -20,16 +19,13 @@
 			</div>
 		    <div id="player"></div>
 			<form>
-				<p>
-					<input type="text" class="form-control" id="focusedInput" name="option">
-				</p>
-				<p>
 				<input type="text" class="form-control" id="focusedInput" name="option">
-				</p>
-				<button type="button" class="btn btn-info" data-toggle="button" 
-					onclick="addLine();" id="addBtn">+</button>
-				<button type="button" class="btn btn-info" data-toggle="button" 
-					onclick="choose();">Submit</button>
+				<input type="text" class="form-control" id="focusedInput" name="option">
+				
+				<button type="button" class="btn btn-info" onclick="addLine();" id="addBtn">+</button>
+				<button type="button" class="btn btn-danger" onclick="removeLine();" 
+					id="removeBtn">-</button>
+				<button type="button" class="btn btn-info" onclick="choose();">Submit</button>
 			</form>
 		
 		</div>
