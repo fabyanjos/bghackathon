@@ -24,6 +24,17 @@ function choose() {
 	reset();
 }
 
+function play(type) {
+	SC.get('/tracks', {q: type, limit: 50}, function(tracks) {
+	  var j = Math.floor(Math.random() * tracks.length);
+	  console.log(tracks[j])
+		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
+		  $("#player").html(oEmbed.html);
+		  $("#chosen").text(text);
+		});
+	});
+}
+
 function reset() {
 	for(var i = 0; i < $("input[name=option]").length; i++) {
 		$("input[name=option]")[i].value = ""

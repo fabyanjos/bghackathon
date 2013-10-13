@@ -18,7 +18,13 @@
 				<h2 id="chosen" class="text-warning"></h2>	
 			</div>
 		    <div id="player"></div>
-			<form>
+		    <h2>How are you feeling?</h2>
+		    <div>
+		    	<button type="button" class="btn btn-info" onclick="play('happy');" id=""><img src="/img/happy.png"/></button>
+		    	<button type="button" class="btn btn-info" onclick="play('sad');" id="addBtn"><img src="/img/sad.png"/></button>
+		    </div>
+		    
+			<div>
 				<input type="text" class="form-control" id="focusedInput" name="option">
 				<input type="text" class="form-control" id="focusedInput" name="option">
 				
@@ -26,7 +32,7 @@
 				<button type="button" class="btn btn-danger" onclick="removeLine();" 
 					id="removeBtn">-</button>
 				<button type="button" class="btn btn-info" onclick="choose();">Submit</button>
-			</form>
+			</div>
 		
 		</div>
 	</div>
