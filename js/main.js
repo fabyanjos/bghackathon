@@ -15,9 +15,9 @@ function choose() {
 	var text = $("input[name=option]")[i].value;
 	SC.get('/tracks', {q: $("input[name=option]")[i].value, limit: 50}, function(tracks) {
 	  var j = Math.floor(Math.random() * tracks.length);
+	  console.log(tracks[j])
 		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
 		  $("#player").html(oEmbed.html);
-		  console.log(text);
 		  $("#chosen").text(text);
 		});
 	});
