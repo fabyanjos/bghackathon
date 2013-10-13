@@ -12,7 +12,7 @@ function removeLine() {
 
 function choose() {
 	var text = $("input[name=option]")[0].value;
-	SC.get('/tracks', {q: text, limit: 50}, function(tracks) {
+	SC.get('/tracks', {q: text, limit: 200}, function(tracks) {
 	  var j = Math.floor(Math.random() * tracks.length);
 	  console.log(tracks[j])
 		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
@@ -24,11 +24,12 @@ function choose() {
 }
 
 function play(type) {
-	SC.get('/tracks', {q: type, limit: 50}, function(tracks) {
+	SC.get('/tracks', {q: type, limit: 200}, function(tracks) {
 	  var j = Math.floor(Math.random() * tracks.length);
 	  console.log(tracks[j])
 		SC.oEmbed(tracks[j].permalink_url, { auto_play: true }, function(oEmbed) {
 		  $("#player").html(oEmbed.html);
+		  $("#chosen").text('');
 		});
 	});
 }

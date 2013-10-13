@@ -13,3 +13,7 @@ h1:first-letter, h2:first-letter {
 .btn {
 	margin-bottom: 10px;
 }
+
+#faces .btn {
+	margin-left: 10px;
+}

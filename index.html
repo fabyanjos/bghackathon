@@ -11,22 +11,32 @@
 <body>
 	<div class="container">
 		<div class="page-header">
-		  <h1>Do you have a doubt? <small>We choose for you</small></h1>
+		  <h1>Don't know what to listen to <small>We choose something for you</small></h1>
 		</div>
 		<div class="jumbotron">
 			<div>
 				<h2 id="chosen" class="text-warning"></h2>	
 			</div>
 		    <div id="player"></div>
-		    <h2>How are you feeling?</h2>
-		    <div>
-		    	<button type="button" class="btn btn-info" onclick="play('happy');"><img src="/img/happy.png"/></button>
-		    	<button type="button" class="btn btn-info" onclick="play('sad');" id="addBtn"><img src="/img/sad.png"/></button>
+		    <h2>Choose a theme</h2>
+		    <div id="faces">
+		    	<button type="button" class="btn btn-info" onclick="play('happy');">
+		    		<img src="/img/happy.png"/></button>
+		    	<button type="button" class="btn btn-info" onclick="play('sad');" id="addBtn">
+		    		<img src="/img/sad.png"/></button>
+		    	<button type="button" class="btn btn-info" onclick="play('in love');" id="addBtn">
+		    		<img src="/img/inlove.png"/></button>
+		    	<button type="button" class="btn btn-info" onclick="play('cry');" id="addBtn">
+		    		<img src="/img/cry.png"/></button>
+		    	<button type="button" class="btn btn-info" onclick="play('angry');" id="addBtn">
+		    		<img src="/img/angry.png"/></button>
+		    	<button type="button" class="btn btn-info" onclick="play('alien');" id="addBtn">
+		    		<img src="/img/alien.png"/></button>
 		    </div>
 		    
 			<div>
+				<label>Or write something</label>
 				<input type="text" class="form-control" id="focusedInput" name="option">
-				
 				<button type="button" class="btn btn-info" onclick="choose();">Submit</button>
 			</div>
 		
