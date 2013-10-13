@@ -14,17 +14,21 @@
 		<div class="page-header">
 		  <h1>Do you have a doubt? <small>We choose for you</small></h1>
 		</div>
-		<div class="hero-unit">
+		<div class="jumbotron">
 			<div>
-				<h3 id="chosen"></h3>
+				<h2 id="chosen"></h2>
 			</div>
 		    <div id="player"></div>
 			<form>
-				<input type="text" data-provide="typehead" name="option">
-				<input type="text" data-provide="typehead" name="option">
-				<button type="button" class="btn btn-primary" data-toggle="button" 
+				<p>
+					<input type="text" class="form-control" id="focusedInput" name="option">
+				</p>
+				<p>
+				<input type="text" class="form-control" id="focusedInput" name="option">
+				</p>
+				<button type="button" class="btn btn-info" data-toggle="button" 
 					onclick="addLine();" id="addBtn">+</button>
-				<button type="button" class="btn btn-primary" data-toggle="button" 
+				<button type="button" class="btn btn-info" data-toggle="button" 
 					onclick="choose();">Submit</button>
 			</form>
 		

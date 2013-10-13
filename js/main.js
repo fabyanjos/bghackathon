@@ -3,7 +3,7 @@ SC.initialize({
 });
 
 function addLine() {
-	$("#addBtn").before('<input type="text" data-provide="typehead" name="option">')
+	$("#addBtn").before('<p><input type="text" class="form-control" id="focusedInput" name="option"></p>')
 }
 
 function choose() {
